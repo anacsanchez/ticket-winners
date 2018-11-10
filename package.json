@@ -1,10 +1,12 @@
 {
-  "name": "fsa_boilerplate",
+  "name": "boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build-client-watch": "webpack -w",
+    "postinstall": "webpack",
+    "start": "node server",
     "start-dev": "NODE_ENV='development' npm run build-client-watch & npm run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
     "test": "mocha *.spec.js --compilers js:babel-register"
@@ -14,6 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "morgan": "^1.9.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -34,7 +37,6 @@
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.11",
     "eslint": "^5.2.0",
-    "express": "^4.16.3",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.3",
     "redux-devtools-extension": "^2.13.5",
