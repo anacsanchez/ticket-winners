@@ -22,8 +22,7 @@ const Winners = ({ ticketsAvailable, showId, entrants }) => {
     <div>
       { isLoading ? <div>Loading...</div> :
         <div>
-          <div>Winners: <UserList entrants={entrants} winners={winners}/></div>
-          {/* <div>Winners: <UserList users={winners} /></div> */}
+          <div className="success-title">Winners</div> <UserList entrants={entrants} winners={winners}/>
         </div>
       }
     </div>

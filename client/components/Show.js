@@ -12,6 +12,7 @@ const Show = ({ show }) => {
   return (
     <div className="shows">
       <div className="show-names">{show.name}</div>
+      <div className="show-description">{show.description}</div>
       <TicketsAvailableForm handleSubmit={setTicketsAvailable} />
       <div> { tickets ? <Winners showId={show.id} ticketsAvailable={tickets} entrants={show.entrants } /> : null }</div>
     </div>
