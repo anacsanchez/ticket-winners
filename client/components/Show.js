@@ -6,12 +6,12 @@ const Show = () => {
 
   const setTicketsAvailable = (evt) => {
     evt.preventDefault();
-    setTickets(parseInt(10, evt.target.ticketsAvailable.value));
+    setTickets(parseInt(evt.target.ticketsAvailable.value));
   };
 
   return (
-    <div>
-      <span>A Musical People Like </span>
+    <div className="shows">
+      <div className="show-names">A Musical People Like </div>
       <TicketsAvailableForm handleSubmit={setTicketsAvailable} />
       <div> { tickets ? <Winners ticketsAvailable={tickets} /> : null }</div>
     </div>

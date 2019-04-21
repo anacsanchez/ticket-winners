@@ -1,9 +1,9 @@
 import React from 'react';
 
 const TicketForm = ({ handleSubmit }) => (
-  <form onSubmit={handleSubmit}>
-    <label>Tickets Available: </label><input type="text" name="ticketsAvailable" />
-    <input type="submit" />
+  <form className="small-forms" onSubmit={handleSubmit}>
+    <div><label>Tickets Available: </label><input type="text" name="ticketsAvailable" size="3" required /></div>
+    <input type="submit" value="Submit" className="input-submit-buttons"/>
   </form>
 );
 

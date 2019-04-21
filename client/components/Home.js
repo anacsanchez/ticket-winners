@@ -1,9 +1,9 @@
 import React from 'react';
-import Show from './Show.js';
+import { Show } from './index';
 
 const Home = () => {
   return (
-    <div>Shows:
+    <div id="main">
       <Show />
     </div>
   );

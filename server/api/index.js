@@ -4,7 +4,6 @@ module.exports = router;
 router.post('/', (req,res) => {
   const data = require('./entrants.json');
   res.json(pickWinners(data, req.body.ticketsAvailable));
-
 });
 
 function pickWinners(entries, ticketsAvailable) {
