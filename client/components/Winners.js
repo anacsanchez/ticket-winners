@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Entrants } from './index';
 
 const Winners = ({ ticketsAvailable }) => {
   const [winners, setWinners] = useState([]);
@@ -9,25 +10,18 @@ const Winners = ({ ticketsAvailable }) => {
     const fetchData = async () => {
       setLoading(true);
 
-      const ticketWinners = await axios('/api', ticketsAvailable);
-        // .then(res => res.json())
+      const ticketWinners = await axios.post('/api', { ticketsAvailable });
 
       setWinners(ticketWinners.data);
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [ticketsAvailable]);
 
   return (
     <div>
-      { isLoading ?
-          <div>Loading...</div> :
-          winners.map((winner, i) =>
-            <div key={i}>
-              Id: {winner.id}, Tickets: {winner.tickets}
-            </div>
-          )
-        }
+      { isLoading ? <div>Loading...</div> :
+      <div>Winners: <Entrants entrants={winners} /></div> }
     </div>
   );
 };

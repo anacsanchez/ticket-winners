@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Entrants = ({ isLoading, entrants }) => (
+const Entrants = ({ entrants }) => (
   <div>
     {
-      isLoading ? 'Loading...' : entrants.map((entrant, i) =>
-      <div key={i}>
-        Id: {entrant.id}, Tickets: {entrant.tickets}
-      </div>
+      entrants.map((entrant, i) =>
+        <div key={i}>
+          Id: {entrant.id}, Tickets: {entrant.tickets}
+        </div>
       )
     }
   </div>
