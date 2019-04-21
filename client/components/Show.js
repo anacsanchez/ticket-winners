@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TicketsAvailableForm, Winners } from './index';
 
-const Show = () => {
+const Show = ({ show }) => {
   const [tickets, setTickets] = useState(null);
 
   const setTicketsAvailable = (evt) => {
@@ -11,9 +11,9 @@ const Show = () => {
 
   return (
     <div className="shows">
-      <div className="show-names">A Musical People Like </div>
+      <div className="show-names">{show.name}</div>
       <TicketsAvailableForm handleSubmit={setTicketsAvailable} />
-      <div> { tickets ? <Winners ticketsAvailable={tickets} /> : null }</div>
+      <div> { tickets ? <Winners showId={show.id} ticketsAvailable={tickets} entrants={show.entrants } /> : null }</div>
     </div>
   );
 };

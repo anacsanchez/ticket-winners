@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/api', require('./api'));
+app.use('/api', require('./api/routes'));
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 

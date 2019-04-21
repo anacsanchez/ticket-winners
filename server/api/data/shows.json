@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Smoke Veil Youth",
+    "ticketsAvailable": 0,
+    "entrants": [
+      { "id": 1, "tickets": 2, "email": "chrisk@optonline.net"},
+      { "id": 2, "tickets": 1, "email": "johnh@mac.com"},
+      { "id": 3, "tickets": 2, "email": "sokol@yahoo.com"},
+      { "id": 4, "tickets": 2, "email": "citizenl@me.com"},
+      { "id": 5, "tickets": 2, "email": "msherr@verizon.net"},
+      { "id": 6, "tickets": 1, "email": "rcwil@outlook.com"},
+      { "id": 7, "tickets": 1, "email": "offthelip@icloud.com"},
+      { "id": 8, "tickets": 2, "email": "carreras@optonline.net"},
+      { "id": 9, "tickets": 1, "email": "ournews@optonline.net"}
+    ],
+    "winners": []
+  },
+  {
+    "id": 2,
+    "name": "The Mighty Voyage",
+    "ticketsAvailable": 0,
+    "entrants": [
+      { "id": 6, "tickets": 1, "email": "rcwil@outlook.com"},
+      { "id": 7, "tickets": 1, "email": "offthelip@icloud.com"},
+      { "id": 8, "tickets": 2, "email": "carreras@optonline.net"},
+      { "id": 9, "tickets": 1, "email": "ournews@optonline.net"},
+      { "id": 10, "tickets": 2, "email": "jbearp@optonline.net"},
+      { "id": 11, "tickets": 2, "email": "mahbub@msn.com"},
+      { "id": 12, "tickets": 2, "email": "hermanab@yahoo.ca"}
+    ],
+    "winners": []
+  }
+]

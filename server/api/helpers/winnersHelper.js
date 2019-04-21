@@ -1,11 +1,3 @@
-const router = require('express').Router();
-module.exports = router;
-
-router.post('/', (req,res) => {
-  const data = require('./entrants.json');
-  res.json(pickWinners(data, req.body.ticketsAvailable));
-});
-
 function pickWinners(entries, ticketsAvailable) {
   if (entries.length == 0 || ticketsAvailable == 0) {
     return [];
@@ -35,3 +27,5 @@ function removeEntrantFromArray(entries, entrantIndex) {
     return entries.slice(0, entrantIndex).concat(entries.slice(entrantIndex + 1));
   }
 }
+
+module.exports = pickWinners;

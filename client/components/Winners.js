@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Entrants } from './index';
+import { UserList } from './index';
 
-const Winners = ({ ticketsAvailable }) => {
+const Winners = ({ ticketsAvailable, showId, entrants }) => {
   const [winners, setWinners] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
@@ -10,7 +10,7 @@ const Winners = ({ ticketsAvailable }) => {
     const fetchData = async () => {
       setLoading(true);
 
-      const ticketWinners = await axios.post('/api', { ticketsAvailable });
+      const ticketWinners = await axios.post(`/api/shows/${showId}/winners`, { ticketsAvailable });
 
       setWinners(ticketWinners.data);
       setLoading(false);
@@ -21,7 +21,11 @@ const Winners = ({ ticketsAvailable }) => {
   return (
     <div>
       { isLoading ? <div>Loading...</div> :
-      <div>Winners: <Entrants entrants={winners} /></div> }
+        <div>
+          <div>Winners: <UserList entrants={entrants} winners={winners}/></div>
+          {/* <div>Winners: <UserList users={winners} /></div> */}
+        </div>
+      }
     </div>
   );
 };
