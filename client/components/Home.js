@@ -1,12 +1,13 @@
 import React from 'react';
-import { Entrants } from './index';
+import Show from './Show.js';
+// import { Entrants } from './index';
 const Home = () => {
   return (
     <div>
-    Pick the Lottery Winners!
-    <Entrants />
+      Find the Ticket Lottery Winners!
+      <Show />
     </div>
-  )
+  );
 };
 
 export default Home;

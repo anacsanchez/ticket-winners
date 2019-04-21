@@ -2,3 +2,4 @@
 
 export { default as Home } from './Home';
 export { default as Entrants } from './Entrants'
+export { default as TicketsAvailableForm } from './TicketsAvailableForm'
