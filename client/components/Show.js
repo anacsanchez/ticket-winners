@@ -8,7 +8,7 @@ const Show = ({ show }) => {
 
   const setTicketsAvailable = (evt) => {
     evt.preventDefault();
-    // evt.stopPropagation();
+
     const fetchWinners = async () => {
       setLoading(true);
       const tickets = parseInt(evt.target.ticketsAvailable.value);
