@@ -4,14 +4,21 @@ const morgan = require('morgan');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 8080;
+const router = require('./api/routes');
 module.exports = app;
 
 app.use(morgan('dev'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+console.log(process.env.NODE_ENV)
+if (process.env.NODE_ENV == 'development') {
+  app.use(`/${process.env.URL}/api`, router);
+}
+else {
+  app.use('/api', router);
+}
 
-app.use('/api', require('./api/routes'));
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
