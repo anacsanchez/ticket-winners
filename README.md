@@ -5,4 +5,4 @@ Built with:
 - React
 - Node.js
 
-[Pick Winners Algorithm](server/api/helpers/winnersHelper.js)
+[View Pick Winners Algorithm](server/api/helpers/winnersHelper.js)
