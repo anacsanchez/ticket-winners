@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Show } from './index';
 import axios from 'axios';
+axios.defaults.baseURL = "/ticket-winners";
 
 const Home = () => {
   const [shows, setShows] = useState([]);
