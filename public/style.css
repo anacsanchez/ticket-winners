@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(0, 3.8%, 89.8%);
 }
 #main {
   display: flex;
@@ -10,11 +11,13 @@ body {
 #header a {
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid hsl(20, 70%,25%);
   padding-bottom: 2px;
+  color: hsl(20, 70%,25%)
 }
 
 .user-lists {
+  margin-top: 4px;
   display: flex;
   flex-direction: column;
 }
@@ -23,12 +26,12 @@ body {
   border: 1px solid gray;
 }
 .shows {
-  border: 1px solid rgb(71, 71, 71);
   padding: 16px 32px;
   width: 30%;
   border-radius: 4px;
   margin: 20px;
   min-height: 500px;
+  background-color: hsl(35.3, 36.2%, 81.6%)
 }
 .show-names {
   text-align: center;
@@ -53,33 +56,38 @@ body {
   text-align: center;
   font-size: 14px;
   padding: 4px;
-  border: 1px solid gray;
+  border: 1px solid transparent;
+  color: white;
   border-radius: 2px;
   margin: 10px 0px;
   cursor: pointer;
+  background-color: hsl(20, 70%,25%);
 }
 
 .winner {
-  background-color: green;
+  background-color: hsl(120,50%,40%) !important;
   color: white;
 }
 .users {
   padding: 4px;
-  border: 1px solid gray;
+  border: .5px solid hsl(30, 20%, 85%);
+  background-color: hsl(30,20%,95%);
 }
 
 .title {
+  margin-top: 4px;
   padding: 2px;
   color: black;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .success-title {
+  margin-top: 4px;
   padding: 2px;
   color: green;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 input {
