@@ -4,4 +4,3 @@ export { default as Home } from './Home';
 export { default as UserList } from './UserList';
 export { default as TicketsAvailableForm } from './TicketsAvailableForm';
 export { default as Show } from './Show';
-export { default as Winners } from './Winners';

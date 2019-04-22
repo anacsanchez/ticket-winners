@@ -7,11 +7,11 @@ router.get('/', (req,res) => {
 });
 
 router.post('/', (req, res) => {
-  if (!req.body.ticketsAvailable) {
+  if (!req.body.tickets) {
     res.json();
   }
   else {
-    const winners = pickWinners(req.show.entrants, req.body.ticketsAvailable);
+    const winners = pickWinners(req.show.entrants, req.body.tickets);
     res.json(winners);
   }
 });
